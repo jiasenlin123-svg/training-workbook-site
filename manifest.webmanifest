@@ -1,0 +1,17 @@
+{
+  "name": "训练手册 · 力量训练计划与记录",
+  "short_name": "训练手册",
+  "description": "个人力量训练计划、动作教学与训练记录，可添加到主屏幕离线打开已缓存页面。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#171a1f",
+  "theme_color": "#171a1f",
+  "icons": [
+    { "src": "assets/app-icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "assets/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
