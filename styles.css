@@ -159,3 +159,194 @@ body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bot
 body.kb .bottomnav{display:none}
 body.kb .foot{padding-bottom:24px}
 }
+
+/* 第四批：我的训练课（自定义课） */
+#myErrors:empty{display:none}
+.myworkouts h1,.myeditor h1,.mydetail h1{font-size:30px}
+.myfield{margin:16px 0}
+.myfield>.fieldlabel{display:block;margin-bottom:6px}
+.myeditor>label,.mymove>label{display:block;font-size:13px;color:var(--muted);margin:14px 0}
+.myeditor>label input,.myeditor>label select,.mymove>label select,.mycustom input{display:block;width:100%;background:#171a1f;color:var(--text);border:1px solid var(--line);padding:12px;margin-top:7px;font:inherit;box-sizing:border-box;min-height:44px}
+.mycards{display:grid;gap:16px;margin:20px 0}
+.mycard{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--panel);padding:18px}
+.mycardhead{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.mycardhead h3{margin:0;font-size:19px;overflow-wrap:anywhere}
+.mytags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;font-size:11px;color:var(--muted)}
+.mytags>span{border:1px solid var(--line);padding:2px 8px}
+.mytags .mytag{border-color:var(--accent);color:var(--accent);letter-spacing:.06em}
+.mymovenames{font-size:12px;color:var(--muted);line-height:2;margin:8px 0 4px;overflow-wrap:anywhere}
+.mymovenames b{color:var(--accent);font-weight:600;white-space:nowrap}
+.mymoves{display:grid;gap:12px;margin:14px 0}
+.mymove{border:1px solid var(--line);background:var(--panel);padding:14px}
+.mymovehead{display:flex;gap:10px;align-items:baseline}
+.mymovehead b{font-size:16px}
+.mymovehead small{display:block;font-size:11px;color:var(--muted)}
+.mytarget{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end;margin:12px 0 4px}
+.mytarget .fieldlabel{flex:0 0 100%;color:var(--muted);font-size:12px}
+.mytarget button.selected{border-color:var(--accent);color:var(--accent)}
+.mycustom{flex:1 1 150px;min-width:130px;font-size:12px;color:var(--muted)}
+.mycustom input{margin-top:6px;padding:10px}
+.mypicker{border:1px solid var(--accent);background:#1b1f25;padding:18px;margin:16px 0}
+.mypicker .search{margin:6px 0 12px}
+.mypicklist{max-height:420px;overflow-y:auto;border-top:1px solid var(--line);margin-top:6px}
+.mypickrow{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);min-width:0}
+.mypickrow>span:first-child{min-width:0}
+.mypickrow b{font-size:14px;overflow-wrap:anywhere}
+.mypickrow small{display:block;font-size:11px;color:var(--muted);line-height:1.6}
+.mypickrow .myblocked{color:#ffc484;margin-top:3px}
+.mytagblocked{font-size:11px;color:var(--muted);border:1px dashed var(--line);padding:2px 8px;white-space:nowrap}
+.mysection{margin:24px 0;border-top:1px solid var(--line);padding-top:16px}
+.mysection h2{font-size:19px}
+.mysection p{font-size:13px;line-height:1.9;margin:8px 0}
+.mysection small{color:var(--muted)}
+.myrow{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.myrow small{display:block;font-size:11px;color:var(--muted)}
+.myentry{border:1px solid var(--line);border-top:3px solid var(--accent);background:var(--panel);padding:18px;margin:18px 0}
+.myentryrow{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.myentryrow small{display:block;font-size:11px;color:var(--muted)}
+.myentry .planactions{margin-bottom:0}
+.mypicker button:disabled,.mymove button:disabled{opacity:.45;cursor:default}
+@media(max-width:760px){
+.myworkouts,.myeditor,.mydetail{padding:0}
+.mycardhead{display:block}
+.mycard .runbuttons>*{flex:1 1 40%}
+.mymove .runbuttons>*{flex:1 1 30%}
+.mytarget .mycustom{flex:1 1 100%}
+.myentryrow{display:block}
+.myentryrow .runbuttons{margin-top:8px}
+.mypickrow{align-items:flex-start}
+.mypicklist{max-height:none}
+}
+.mydetail .planactions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mydetail .planactions>.action{grid-column:1/-1;width:auto;margin:0}
+.mydetail .planactions>button{width:100%}
+.myworkouts .planactions>.action{flex:0 0 auto;min-width:190px}
+.myeditor .planactions>.action{flex:0 0 auto;min-width:190px}
+@media(min-width:761px){.mytarget .mycustom{flex:0 1 200px}.mytarget .mycustom input{width:100%}}
+.mypicker>.fieldlabel{display:block;margin:14px 0 4px}
+.mypicker #myPickCount{margin:8px 0 0}
+.mypicker #myPickEmpty{margin:0;padding:20px 0;font-size:13px;line-height:1.9}
+.mypicker #myPickClear:disabled{opacity:.45;cursor:default}
+.mytagwarn{display:inline-block;font-size:11px;border:1px dashed #e3bf80;color:#e3bf80;padding:2px 8px;margin-left:6px;letter-spacing:.04em;white-space:nowrap}
+.mytags .mytagwarn{margin-left:0}
+.mypending{color:#e3bf80}
+
+/* 重量口径提示（仅站姿提踵等需限定单位的口径） */
+.wghint{border-left:2px solid #e3bf80;padding-left:9px;margin:10px 0 2px;color:#e3bf80;font-size:12px;line-height:1.75}
+
+/* ===== 第四轮：四入口结构 ===== */
+.trainhead{display:flex;gap:6px;padding:5px;margin:16px 0 18px;background:var(--panel);border:1px solid var(--line)}
+.trainhead button{flex:1;min-height:44px;background:transparent;border:0;color:var(--muted);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.trainhead button.on{background:var(--accent);color:#17181b}
+.trainhead button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ===== 第四轮：今天 / 记录 / 我的 / 执行 ===== */
+.weekprogress .row,.lastwork .row,.mecard .row,.runbar .row,.curmove .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.weekprogress .kv,.lastwork .kv,.mecard .kv{min-width:0;white-space:nowrap}
+.weekprogress .row>.kv:first-child,.lastwork .row>.kv:first-child,.mecard .row>.kv:first-child{flex:0 0 auto}
+.row.between{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dashboard.today .todayfocus{margin-bottom:18px}
+.weekprogress{background:var(--panel);border:1px solid var(--line);padding:16px 18px;margin:0 0 16px}
+.weekprogress .bar{margin-top:10px}
+.weekprogress .loghint{margin:10px 0 0}
+.lastwork{background:var(--panel);border:1px solid var(--line);padding:14px 18px;margin:16px 0 0}
+.lastwork .loghint{margin:6px 0 0}
+.weekplan{margin-top:16px}
+.weekplan .agendarowlist{margin-top:6px}
+.records .titleactions{margin-bottom:6px}
+.reclist{margin:14px 0 4px;border-top:1px solid var(--line)}
+.reclist .loghistory{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.reclist .historyactions{display:flex;gap:8px;flex-shrink:0}
+.recstats{margin-top:18px}
+.statshead{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:6px 0 14px;font-size:12px;color:var(--muted)}
+.statshead label{display:block;font-size:12px;color:var(--muted)}
+.statshead .weekpick input{margin-top:6px}
+.statshead select{margin-top:6px;background:#171a1f;border:1px solid var(--line);color:var(--text);font:inherit;padding:10px;max-width:100%}
+.recstats .scorestrip{margin-bottom:16px}
+.me .mecard{background:var(--panel);border:1px solid var(--line);padding:18px;margin:0 0 14px}
+.mename{font-size:24px;font-weight:700;margin:6px 0 2px;overflow-wrap:anywhere}
+.mechips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.mechips>span{border:1px solid var(--line);padding:4px 10px;font-size:12px;color:var(--muted)}
+.mechips>span.muted{border-style:dashed}
+/* 执行页 */
+.runbar{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:14px 18px;background:#101318;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:12}
+.runbartitle{min-width:0}
+.runbartitle h1{font-size:19px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.runbartitle .loghint{margin:4px 0 0;font-size:11px}
+.runbarright{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.runclockmini{font-size:12px;color:var(--muted);white-space:nowrap}
+.runclockmini b{color:var(--text);font-variant-numeric:tabular-nums;margin-left:4px}
+.runbarright .secondary{padding:8px 10px;min-height:38px;font-size:12px}
+.runmenu{position:relative}
+.runmenu>summary{list-style:none;width:40px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);cursor:pointer;font-size:18px;color:var(--muted)}
+.runmenu>summary::-webkit-details-marker{display:none}
+.runmenuBody{position:absolute;right:0;top:44px;background:var(--panel);border:1px solid var(--line);padding:10px;display:grid;gap:8px;min-width:170px;z-index:20}
+.runmenuBody .secondary{width:100%}
+.runstate{margin:10px 0 0;font-size:12px;color:var(--muted);padding:8px 12px;border-left:2px solid var(--line);background:#191d23;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.runstate.err{color:#ffc484;border-left-color:#ffc484;background:#241d16;font-size:13px}
+.runstate .secondary{padding:6px 10px;min-height:34px;font-size:12px}
+.execution .runphases{margin:12px 0}
+.curmove{background:var(--panel);border:1px solid var(--line);padding:16px 18px;margin:14px 0 0}
+.curmovehead{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.curmove h2{font-size:22px;margin:8px 0 4px;overflow-wrap:anywhere}
+.curmove .last{margin:0;font-size:12px;color:var(--muted)}
+.moveswitch>summary{list-style:none;cursor:pointer;font-size:12px;color:var(--accent);border:1px solid var(--line);padding:6px 10px}
+.moveswitch>summary::-webkit-details-marker{display:none}
+.moveswitchlist{display:grid;gap:8px;margin-top:10px}
+.moveswitchlist button{text-align:left}
+.moveswitchlist button.selected{border-color:var(--accent);color:var(--accent)}
+.moveswitchlist small{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.currentset{border:1px solid var(--accent);background:#20242b;padding:16px 18px;margin:12px 0 0}
+.currentset .runset{border:0;background:transparent;padding:0;margin:0}
+.currentset .paneltitle{margin-bottom:4px}
+.currentset .paneltitle strong{font-size:16px}
+.reststrip{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;background:#1b2028;border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 18px;margin:12px 0 0}
+.reststrip.idle{border-left-color:var(--line)}
+.restmain{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;min-width:0}
+.restlabel{font-size:12px;color:var(--muted)}
+.restlabel small{color:var(--muted)}
+.restmain b{font-size:26px;font-variant-numeric:tabular-nums}
+.resthint{font-size:11px;color:var(--muted)}
+.restacts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.restacts .secondary{padding:8px 10px;min-height:36px;font-size:12px}
+.restacts .textbutton{font-size:12px}
+.reststrip.idle .secondary{padding:8px 10px;min-height:36px;font-size:12px}
+.donesets,.latersets,.warmsets,.runteaching,.runmore{border:1px solid var(--line);background:var(--panel);margin:12px 0 0}
+.donesets>summary,.latersets>summary,.warmsets>summary,.runteaching>summary,.runmore>summary{list-style:none;cursor:pointer;padding:14px 18px;font-size:13px;color:var(--text);display:flex;justify-content:space-between;gap:10px;align-items:center}
+.donesets>summary::-webkit-details-marker,.latersets>summary::-webkit-details-marker,.warmsets>summary::-webkit-details-marker,.runteaching>summary::-webkit-details-marker,.runmore>summary::-webkit-details-marker{display:none}
+.donesets>summary::after,.latersets>summary::after,.warmsets>summary::after,.runteaching>summary::after,.runmore>summary::after{content:"展开";font-size:11px;color:var(--muted)}
+.donesets[open]>summary::after,.latersets[open]>summary::after,.warmsets[open]>summary::after,.runteaching[open]>summary::after,.runmore[open]>summary::after{content:"收起"}
+.donesetsbody,.runmorebody{padding:0 18px 16px}
+.donesetsbody .runset{margin:10px 0}
+.runmorebody label{display:block;font-size:12px;color:var(--muted);margin:12px 0}
+.runmorebody input{display:block;width:100%;margin-top:6px;background:#171a1f;border:1px solid var(--line);color:var(--text);padding:10px;font:inherit;box-sizing:border-box}
+@media(max-width:760px){
+ .runbar{padding:12px 14px;gap:8px}
+ .runbartitle h1{font-size:17px}
+ .runbarright .runclockmini{display:none}
+ .curmove,.currentset,.reststrip{padding:14px}
+ .restacts{width:100%}
+ .restmain b{font-size:22px}
+ .statshead{display:block}
+ .statshead label{margin-bottom:10px}
+ .me .mecard{padding:16px}
+}
+body.in-run .top{display:none}
+body.in-run #main{padding-top:0}
+.reclist .loghistory{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.reclist .historyactions{display:flex;gap:8px}
+.reclist .historyactions .secondary{padding:8px 10px;min-height:38px;font-size:12px;white-space:nowrap}
+.mecard .planactions{display:grid;grid-template-columns:1fr;gap:10px}
+.mecard .planactions .secondary{white-space:nowrap;text-align:center;justify-content:center}
+.mecard .planactions label.secondary{display:block}
+.mecard input[type=file]{max-width:100%;font-size:12px}
+.me .mecard:first-of-type .row>.kv:last-child{text-align:right}
+/* 我的：首屏必须看到备份，压缩档案卡 */
+.me .mecard:nth-of-type(1) .planactions{grid-template-columns:1fr 1fr}
+.me .mecard{padding:15px 16px;margin-bottom:12px}
+.me .mename{font-size:22px;margin:4px 0 0}
+.me .mecard .loghint{margin:8px 0 0;font-size:12px;line-height:1.7}
+.me .mecard .planactions{margin:12px 0 0}
+.reststrip{padding:10px 14px}
+.restmain b{font-size:22px}
+.restacts .secondary{min-height:34px;padding:7px 9px}
